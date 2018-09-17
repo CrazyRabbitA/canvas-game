@@ -1,0 +1,9 @@
+不建议使用css给canvas指定大小，css只是指定的是整个canvas显示的大小，而是写在canvas标签中，还可以指定canvas内部显示分辨率的大小，写在canvas标签内是不带单位，不指定宽高，默认是300*150
+var canvas=document.querySelector('#canvas')
+var context=canvas.getContext('2d')
+getContext()方法，获取绘图上下文环境，2d绘图传入参数'2d'，
+使用canvas.width 和canvas.height可以在js层面控制和获取canvas的宽高
+在canvas标签内部写入文字或一些有样式的代码，可以在浏览器不支持canvas时把这些内容显示出来，如果浏览器支持canvas，标签内的内容是不会被显示出来的
+也可通过判断canvas.getContext('2d')是否为空的方法判断浏览器是否支持canvas
+moveTo(),lineTo(),stroke(用于绘制线条),lineWidth(线宽),strokeStyle(颜色)，context.fillStyle,fill(填充颜色)
+canvas绘图是基于状态的绘图，先设置绘图的状态，之后调用相应的方法去绘制
